@@ -1,0 +1,102 @@
+:root {
+    --m-0: 5px;
+    --m-1: 15px;
+    --p-0: 5px;
+    --p-1: 15px;
+    --bg-black-transparent: rgba(100, 100, 100, 0.5);
+    --bg-white-transparent: rgba(255, 255, 255, 0.5);
+}
+
+/* Regole Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+}
+
+/* Regole Layout */
+body {
+    font-family: sans-serif;
+}
+
+.main-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.webcam-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1750px;
+    margin-inline: auto;
+}
+
+.row {
+    display: flex;
+}
+
+/* Webcam Wrapper */
+.webcam-wrapper .row {
+    flex-wrap: wrap;
+    gap: var(--m-1) var(--m-0);
+    padding-top: calc(var(--p-1) * 5);
+}
+
+.webcam-wrapper .col {
+    flex-basis: calc(calc(100% - var(--m-0) * 6) / 7);
+}
+
+.webcam-wrapper__view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--p-0);
+}
+
+.webcam-wrapper__view .view__btn {
+    padding: var(--p-0);
+    border-radius: 4px;
+    background-color: var(--bg-white-transparent);
+    color: #fff;
+}
+
+.webcam-wrapper__view .view__btn:first-child i {
+    margin-right: var(--m-0);
+}
+
+/* Webcam */
+.webcam {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: url(../img/cane.jpg) center center;
+    background-size: cover;
+}
+
+.webcam .mic--muted {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background-color: var(--bg-black-transparent);
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/* Menu Bottom */
+.menu-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
