@@ -22,6 +22,10 @@ ul {
     list-style-type: none;
 }
 
+img {
+    width: 100%;
+}
+
 /* Regole Layout */
 body {
     font-family: sans-serif;
@@ -81,9 +85,12 @@ body {
 /* Webcam */
 .webcam {
     position: relative;
+}
+
+.webcam img {
     aspect-ratio: 16/9;
-    background: url(../img/cane.jpg) center center;
-    background-size: cover;
+    object-fit: cover;
+    object-position: center;
 }
 
 .webcam .mic--muted {
