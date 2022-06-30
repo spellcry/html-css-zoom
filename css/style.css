@@ -18,9 +18,14 @@ button {
     border: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* Regole Layout */
 body {
     font-family: sans-serif;
+    font-size: 14px;
 }
 
 .main-content {
@@ -88,15 +93,59 @@ body {
     padding: 5px;
     background-color: var(--bg-black-transparent);
     color: #fff;
-    font-size: 14px;
 }
 
 
 /* Menu Bottom */
-.menu-bottom {
+.main-nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #000;
+    background-color: #222;
     color: #fff;
+}
+
+.main-nav .btn__wrapper:first-child {
+    padding-left: var(--p-1);
+}
+
+.btn__wrapper {
+    display: flex;
+    padding: var(--p-1) 0;
+    column-gap: calc(var(--m-1) * 1.5);
+}
+
+.btn__wrapper .btn {
+    cursor: pointer;
+}
+
+.main-nav .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__ico-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: var(--p-1);
+}
+
+.btn__ico-text i {
+    font-size: 25px;
+    margin-bottom: var(--m-0);
+}
+
+.btn__ico-text--share i {
+    color: green;
+}
+
+.end-meeting.btn__wrapper {
+    background-color: #4A4A4A;
+    color: #f00;
+}
+
+.btn__ico-text--end {
+    padding-inline: var(--p-1);
 }
