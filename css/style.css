@@ -44,6 +44,7 @@ body {
 .webcam-wrapper {
     position: relative;
     flex-grow: 1;
+    overflow: auto;
 }
 
 .container {
@@ -58,12 +59,13 @@ body {
 /* Webcam Wrapper */
 .webcam-wrapper .row {
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--m-1) var(--m-0);
-    padding-top: calc(var(--p-1) * 5);
+    padding-block: calc(var(--p-1) * 5);
 }
 
 .webcam-wrapper .col {
-    flex-basis: calc(calc(100% - var(--m-0) * 6) / 7);
+    flex-basis: 220px;
 }
 
 .webcam-wrapper__view {
